@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
-    [Header ("Attack Parameters")]
+    [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
@@ -14,6 +14,10 @@ public class MeleeEnemy : MonoBehaviour
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
+
+    [Header("Attack Sound")]
+    [SerializeField] private AudioClip attackSound;
+
 
     //References
     private Animator anim;
@@ -36,6 +40,7 @@ public class MeleeEnemy : MonoBehaviour
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
+                SoundManager.instance.PlaySound(attackSound);
                 anim.SetTrigger("meleeAttack");
             }
         }

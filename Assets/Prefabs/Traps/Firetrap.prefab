@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8523774052843739341
 SpriteRenderer:
@@ -161,6 +161,7 @@ MonoBehaviour:
   damage: 1
   activationDelay: 2
   activeTime: 2
+  firetrapSound: {fileID: 8300000, guid: e449829aa5ca64e7b88425178c638da9, type: 3}
 --- !u!95 &6956708087416914064
 Animator:
   serializedVersion: 5
